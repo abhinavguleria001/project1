@@ -1,0 +1,118 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/images/pexels-pixabay-63294.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* Dark Overlay for Readability */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Center Content */
+.content-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Search Box */
+.search-box {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+.header h1 {
+    color: #007BFF;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.header p {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Search Form */
+.form-control {
+    border-radius: 0.5rem;
+    padding: 12px;
+    border: 2px solid #007BFF;
+    font-size: 16px;
+}
+.form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+.btn-primary {
+    background-color: #007BFF;
+    border: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 0.5rem;
+    font-size: 16px;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.table th {
+    background: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+.table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .search-box {
+        margin: 20px;
+        padding: 25px;
+    }
+}
